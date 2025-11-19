@@ -1,0 +1,45 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background: vibrant gradient */
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #ffb199, #fad0c4);
+    background-size: 300% 300%;
+    animation: bgAnimation 10s infinite alternate ease-in-out;
+}
+
+/* Color-changing heading */
+h1 {
+    font-size: 3rem;
+    padding: 20px 40px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    animation: colorCycle 5s infinite alternate ease-in-out;
+}
+
+/* Animated background gradient */
+@keyframes bgAnimation {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Animated colorful text */
+@keyframes colorCycle {
+    0% { color: #ffffff; }
+    25% { color: #ffe66d; }
+    50% { color: #a8ff60; }
+    75% { color: #60c7ff; }
+    100% { color: #ff85f3; }
+}
